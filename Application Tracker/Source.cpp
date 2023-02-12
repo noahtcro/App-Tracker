@@ -49,14 +49,14 @@ int main() {
 
 void createFile() {
 	std::fstream file;
-	file.open("C:/Users/Admin/Desktop/apps.txt");
+	file.open("apps.txt");
 	if (file) {
 		file.close();
 		std::cout << "File found." << std::endl;
 		return;
 	}
 	else {
-		file.open("C:/Users/Admin/Desktop/apps.txt", std::fstream::out);
+		file.open("apps.txt", std::fstream::out);
 
 		if (!file) {
 			file.close();
@@ -78,7 +78,7 @@ void writeFile() {
 	std::string date;
 	std::string status = "Pending";
 
-	file.open("C:/Users/Admin/Desktop/apps.txt", std::fstream::app);
+	file.open("apps.txt", std::fstream::app);
 
 	std::cout << "Name of the company: ";
 	std::cin >> company;
@@ -114,7 +114,7 @@ void readFile() {
 	int num = 1;
 	int row = 0;
 
-	file.open("C:/Users/Admin/Desktop/apps.txt", std::fstream::in);
+	file.open("apps.txt", std::fstream::in);
 
 	while (getline(file, text)) {
 		if (lead == 1) {
@@ -156,7 +156,7 @@ void editFile() {
 	int record = 0;
 	int choice = 0;
 
-	file.open("C:/Users/Admin/Desktop/apps.txt", std::fstream::in | std::fstream::out | std::fstream::app);
+	file.open("apps.txt", std::fstream::in | std::fstream::out | std::fstream::app);
 
 	std::vector<std::string> edit;
 
@@ -213,7 +213,7 @@ void editFile() {
 		break;
 	}
 
-	file.open("C:/Users/Admin/Desktop/apps.txt", std::fstream::in | std::fstream::out);
+	file.open("apps.txt", std::fstream::in | std::fstream::out);
 
 	for (int i = 0; i < edit.size(); i++) {
 		file << edit.at(i) << std::endl;

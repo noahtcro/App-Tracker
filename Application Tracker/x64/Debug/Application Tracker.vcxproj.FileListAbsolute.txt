@@ -1,1 +1,2 @@
 C:\Users\Admin\source\repos\Application Tracker\x64\Debug\Application Tracker.exe
+C:\Users\Admin\Documents\GitHub\App-Tracker\App-Tracker\Application Tracker\x64\Debug\Application Tracker.exe
